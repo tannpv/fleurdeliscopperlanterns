@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>        
+		<MLogix_Thumbnails>
+			<active>true</active>
+			<codePool>community</codePool>
+		</MLogix_Thumbnails>  		
+	</modules>
+</config>

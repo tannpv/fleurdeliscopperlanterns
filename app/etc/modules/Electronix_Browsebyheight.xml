@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Electronix_Browsebyheight>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Electronix_Browsebyheight>
+    </modules>
+</config> 

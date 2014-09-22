@@ -1,0 +1,23 @@
+<?php
+$cats = Mage::getModel('catalog/category')->load(2)->getChildren();
+$catIds = explode(',', $cats);
+?>
+<ul id="jsddm" class="mainMenu">
+    <li>
+        <a href="#">
+            <b>Category</b>
+        </a>
+    </li>                               
+</ul>
+<table cellspacing="0" style="margin-top: 5px;" >
+    <?php foreach ($catIds as $catId){ ?>
+        <?php $category = Mage::getModel('catalog/category')->load($catId); ?>
+        <tr>
+            <td >
+                <img alt="arr" src="<?php echo $this->getSkinUrl('images/darrow.png') ?>">
+            </td>
+            <td style=" font-family: verdana,arial,sans-serif; font-size: 12px; margin-left: 27px;  padding-left: 6px; padding-top: 0px"><a href="<?php echo $category->getUrl() ?>"><?php echo $category->getName(); ?></a></td>
+            <td >&nbsp;</td>
+        </tr>
+    <?php } ?>
+</table>

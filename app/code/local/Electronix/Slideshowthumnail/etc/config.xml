@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<config>
+    <global>
+        <modules>
+                <electronix_slideshowthumnail>
+                        <version>0.1.0</version>
+                </electronix_slideshowthumnail>
+        </modules>
+    <blocks>
+            <slideshowthumnail>
+                <rewrite>
+         <slideshowthumnail>Electronix_Slideshow_Block_Slideshow</slideshowthumnail>
+        </rewrite>
+            </slideshowthumnail>
+     </blocks>
+        </global>
+       <frontend>
+                <routers>
+                        <slideshowthumnail>
+                                <use>standard</use>
+                                <args>
+                                      <module>Electronix_Slideshowthumnail</module>
+                                      <frontName>slideshowthumnail</frontName>
+                                </args>
+                        </slideshowthumnail>
+                </routers>
+        <layout>
+            <updates>
+                <slideshowthumnail>
+                      <file>slideshowthumnail.xml</file>
+                </slideshowthumnail>
+            </updates>
+            </layout>
+        </frontend>
+</config>

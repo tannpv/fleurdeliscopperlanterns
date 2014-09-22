@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<config>
+    <global>
+        <modules>
+                <electronix_browsebyheight>
+                        <version>0.1.0</version>
+                </electronix_browsebyheight>
+        </modules>
+    <blocks>
+            <browsebyheight>
+                <rewrite>
+         <browsebyheight>Electronix_Browsebyheight_Block_Browsebyheight</browsebyheight>
+        </rewrite>
+            </browsebyheight>
+     </blocks>
+        </global>
+       <frontend>
+                <routers>
+                        <browsebyheight>
+                                <use>standard</use>
+                                <args>
+                                      <module>Electronix_Browsebyheight</module>
+                                      <frontName>browsebyheight</frontName>
+                                </args>
+                        </browsebyheight>
+                </routers>
+        <layout>
+            <updates>
+                <browsebyheight>
+                      <file>browsebyheight.xml</file>
+                </browsebyheight>
+            </updates>
+            </layout>
+        </frontend>
+</config>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+    <layout version="0.1.0">
+        <browsebyheight_index_index>
+            <reference name="root">
+                <action method="setTemplate"><template>page/3columns.phtml</template></action>
+            </reference>
+            <reference name="content">
+                <block type="browsebyheight/browsebyheight" name="browsebyheight"  template="browsebyheight/browsebyheight.phtml"/>
+            </reference>
+<!--            <reference name="top.links">
+            <action method="addLink" translate="label title" module="Electronix"><label>My Account </label><url helper="customer/getAccountUrl"/><title>My Account</title><prepare/><urlParams/><position>10</position></action>
+        </reference>-->
+        </browsebyheight_index_index>
+    </layout>

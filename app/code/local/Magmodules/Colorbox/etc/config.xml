@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * Magmodules.eu
+ * http://www.magmodules.eu
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to info@magmodules.eu so we can send you a copy immediately.
+ *
+ * @category    Magmodules
+ * @package     Magmodules_Colorbox
+ * @author      Magmodules <info@magmodules.eu)
+ * @copyright   Copyright (c) 2013 (http://www.magmodules.eu)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config>
+    <modules>
+        <Magmodules_Colorbox>
+            <version>1.1.5</version>
+        </Magmodules_Colorbox>
+    </modules>
+    <frontend>
+		<layout>
+            <updates>
+                <magmodules_colorbox>
+                    <file>magmodules_colorbox.xml</file>
+                </magmodules_colorbox>
+            </updates>
+        </layout>   
+    </frontend>
+    <global>
+        <blocks>
+            <colorbox>
+                <class>Magmodules_Colorbox_Block</class>
+            </colorbox>
+        </blocks>
+        <models>
+            <colorbox>
+                <class>Magmodules_Colorbox_Model</class>
+            </colorbox>
+        </models>
+        <helpers>
+            <colorbox>
+                <class>Magmodules_Colorbox_Helper</class>
+            </colorbox>
+        </helpers>
+    </global>
+    <frontend>
+        <translate>
+            <modules>
+                <Magmodules_Colorbox>
+                    <files>
+                        <default>Magmodules_Colorbox.csv</default>
+                    </files>
+                </Magmodules_Colorbox>
+            </modules>
+        </translate>
+    </frontend>
+    <adminhtml>
+        <translate>
+            <modules>
+                <Magmodules_Colorbox>
+                    <files>
+                        <default>Magmodules_Colorbox.csv</default>
+                    </files>
+                </Magmodules_Colorbox>
+            </modules>
+        </translate>
+    </adminhtml>
+    <default>
+        <colorbox>
+			<settings>
+				<enabled>0</enabled>
+				<jquery>google</jquery>
+			</settings>
+			<theme>
+				<theme>theme5</theme>
+				<transition>none</transition>
+				<transition_speed>250</transition_speed>								
+			</theme>			
+			<image>
+				<size_main>265_265</size_main>
+				<size_popup>500_500</size_popup>
+				<size_thumb>60_60</size_thumb>	         
+			</image>
+        </colorbox>
+    </default>
+</config>

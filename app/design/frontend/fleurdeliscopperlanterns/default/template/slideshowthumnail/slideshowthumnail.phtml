@@ -1,0 +1,23 @@
+
+<?php
+$product_items = $this->getProductSlideShow();
+
+foreach ($product_items as $product) {
+    //  var_dump($product);
+}
+?>
+
+
+    <ul id="nav" style="position: absolute; left: 420px;" class="catList clearfix">
+         <?php
+            $product_items = $this->getProductSlideShow();
+            $pathimg = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'gallery/';
+        //                    if ($this->getUrl('') == $this->getUrl('*/*/*', array('_current' => true, '_use_rewrite' => true))) { 
+            foreach ($product_items as $product) {
+        ?>
+        <li >
+            <a href="#"> <img src = "<?php echo $pathimg . $product['filename'] ?>" width ="75px" height ="75px" alt=""/></a>
+        </li>
+         <?php } ?> 
+    </ul>
+
