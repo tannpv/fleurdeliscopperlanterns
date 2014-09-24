@@ -282,13 +282,7 @@ class Mage_Sales_Model_Service_Quote {
         if (!$this->getQuote()->isVirtual()) {
             $address = $this->getQuote()->getShippingAddress();
             $addressValidation = $address->validate();
-            /**
-             * *
-             * *  Description:    removing shipping step from checkout
-             * *  Author:         tannpv
-             * *  Date:           2014/09/18     
-             * */
-            /*
+            
               if ($addressValidation !== true) {
               Mage::throwException(
               $helper->__('Please check shipping address information. %s', implode(' ', $addressValidation))
@@ -300,7 +294,7 @@ class Mage_Sales_Model_Service_Quote {
               Mage::throwException($helper->__('Please specify a shipping method.'));
               }
 
-             */
+             
         }
 
 

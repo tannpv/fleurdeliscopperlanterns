@@ -28,13 +28,7 @@ class Mage_Checkout_OnepageController extends Mage_Checkout_Controller_Action {
 
     protected $_sectionUpdateFunctions = array(
         'payment-method' => '_getPaymentMethodsHtml',
-        /**
-         * *
-         * *  Description:    removing shipping method
-         * *  Author:         tannpv
-         * *  Date:           2014/09/18     
-         * */
-        // 'shipping-method' => '_getShippingMethodsHtml',
+        'shipping-method' => '_getShippingMethodsHtml',
         'review' => '_getReviewHtml',
     );
 
@@ -298,32 +292,19 @@ class Mage_Checkout_OnepageController extends Mage_Checkout_Controller_Action {
                         'name' => 'payment-method',
                         'html' => $this->_getPaymentMethodsHtml()
                     );
-                }
-                /**
-                 * *
-                 * *  Description:    removing shipping step from checkout
-                 * *  Author:         tannpv
-                 * *  Date:           2014/09/18     
-                 * */
-                /*
-                  elseif (isset($data['use_for_shipping']) && $data['use_for_shipping'] == 1) {
+                } elseif (isset($data['use_for_shipping']) && $data['use_for_shipping'] == 1) {
 
-                  $result['goto_section'] = 'shipping_method';
-                  $result['update_section'] = array(
-                  'name' => 'shipping-method',
-                  'html' => $this->_getShippingMethodsHtml()
-                  );
+                    $result['goto_section'] = 'shipping_method';
+                    $result['update_section'] = array(
+                        'name' => 'shipping-method',
+                        'html' => $this->_getShippingMethodsHtml()
+                    );
 
-                  $result['allow_sections'] = array('shipping');
-                  $result['duplicateBillingInfo'] = 'true';
-                  } */ else {
-                    /**
-                     * *
-                     * *  Description:    removing shipping step from checkout
-                     * *  Author:         tannpv
-                     * *  Date:           2014/09/18     
-                     * */
-//                    $result['goto_section'] = 'shipping';
+                    $result['allow_sections'] = array('shipping');
+                    $result['duplicateBillingInfo'] = 'true';
+                } else {
+
+                    $result['goto_section'] = 'shipping';
                     $result['goto_section'] = "payment";
                 }
             }

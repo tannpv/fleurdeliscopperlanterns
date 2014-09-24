@@ -40,15 +40,9 @@ class Mage_Checkout_Block_Onepage extends Mage_Checkout_Block_Onepage_Abstract
         if (!$this->isCustomerLoggedIn()) {
             $steps['login'] = $this->getCheckout()->getStepData('login');
         }
-        /**
-         * *
-         * *  Description:    removing shipping step
-         * *  Author:         tannpv
-         * *  Date:           2014/09/18     
-         **/
+    
         
-//        $stepCodes = array('billing', 'shipping', 'shipping_method', 'payment', 'review');
-        $stepCodes = array('billing', 'payment', 'review');
+        $stepCodes = array('billing', 'shipping', 'shipping_method', 'payment', 'review');
 
         foreach ($stepCodes as $step) {
             $steps[$step] = $this->getCheckout()->getStepData($step);
